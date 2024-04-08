@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap");
+
+:root {
+  --main-font-family: "Nunito Sans", sans-serif;
+  --headers-font-family: "Montserrat", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font-family) ;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  header h1{
+    padding: 20px;
+    font-weight: 900;
+  }
+  header p{
+    margin-bottom: 60px;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .option {
+    width: 220px;
+    height: 270px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    flex-basis: calc(33.33% - 20px);
+    transition: all 0.2s;
+  }
+ 
+  .option:hover{
+    height: 320px;
+  }
+  
+    
+  .icon {
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    margin: 0 auto 10px;
+    transition: all 0.5s;
+  }
+
+  .icon img{
+    width: 150px;
+    height: 150px;
+  }
+
+  .option:hover .icon{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    top: -60px;
+    }
+
+  h4{
+    margin-bottom: 5px;
+  }
+
+  .option:hover h4{
+    position: relative;
+    top: -40px;
+  }
+  
+  .option .detail p{
+    position: relative;
+    margin-top: -90px;
+    padding: 8px 12px;
+    text-align: center;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  .option:hover .detail p{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -50px;
+  }
+
+  
+  .option input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin: 3px;
+  }
+  
+  .option input[type="checkbox"]:checked {
+    background-color: rgb(149, 226, 6);
+    border-color: rgb(149, 226, 6);
+
+  }
+  
+  footer {
+    margin-top: 40px;
+    
+  }
+
+  h5{
+    margin-bottom: 6px;
+  }
+
+  button {
+    background-color: rgb(208, 248, 132);    ;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  /* Media queries for mobile responsiveness */
+  @media (max-width: 768px) {
+    .option {
+      flex-basis: calc(50% - 20px); /* Set width to 50% for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .option {
+      flex-basis: 100%; /* Set width to 100% for very small screens */
+    }
+  }
